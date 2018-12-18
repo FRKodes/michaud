@@ -263,6 +263,28 @@ h2.title.faq
 			word-wrap break-word
 	.btn:not(:disabled):not(.disabled)
 		font-weight bold
+.single-product
+	.inner-banner-container
+		height 125px
+button.single_add_to_cart_button
+	border-color red !important
+	color dorado
+form.cart
+	a.tg-btn
+		margin 20px 0
+		border 2px solid dorado !important
+		color dorado !important
+		&:before
+			background-color gris !important
+.woocommerce
+	button.button.alt
+		border 2px solid dorado !important
+		color dorado !important
+		background-color gris !important
+		text-transform uppercase
+.woocommerce
+	button.button.alt
+		padding 10px
 .site-footer
 	background gris2 url(./assets/images/logo_michaud_gris.svg) no-repeat center 30px
 	background-size 150px
@@ -350,7 +372,80 @@ h1.entry-title
 form.cart
 	a.tg-btn
 		background gris !important
+#confirmBox
+	border-radius 0px
+	.button
+		border-radius 0px
+.cart-item-name
+	a
+		color black
+.button
+	background gris
+	color dorado
+	border 2px solid dorado
+	text-transform uppercase
+	font-weight normal
+.checkout-button.button.alt.wc-forward
+	background gris
+	color dorado
+	text-transform uppercase
+	font-weight normal
+	border 2px solid dorado
+.col2-set
+	.col-1
+		width 100% !important
+		padding 0
+		margin 0
+		max-width 100% !important
+.form-row
+	margin 0
+.col-2
+	max-width 100%
+.tab-status
+	a
+		background none
+		text-transform uppercase
+		font-family 'Alegreya', serif
+		span
+			font-style normal
+			color dorado
+			font-size 1.2em
+			background none
+.tg-customizeordernav
+	li
+		a
+			background dorado
+			span
+				color black
+			&:before
+				border-color dorado
+			&:after
+				border-color dorado
+		&.cus-active
+			a
+				span
+					color dorado
+.tg-btnround
+	background none
+	border none
+	&:hover
+		background none
+		text-decoration none
+		color black
+.fa-angle-left:before
+.fa-angle-right:before
+	font-size 3em
 
+span.woocommerce-input-wrapper
+	width 100%
+
+table.cart
+	td.actions
+		.coupon
+			margin-top 30px
+		.button
+			margin-top 30px
+			
 @media screen and (min-width: 375px)
 	.nosotros-images-container
 		height 335px
@@ -494,6 +589,9 @@ form.cart
 				color black
 				text-transform uppercase
 				font-size 0.75em
+	.single-product
+		.inner-banner-container
+			height 150px
 	.site-footer
 		padding-top 75px
 		.footer-column
@@ -529,6 +627,46 @@ form.cart
 			a
 				color white
 				font-weight bold
+	form.cart
+		a.tg-btn
+			margin 0px 0 20px 0
+	a.storefront-sticky-add-to-cart__content-button.button.alt
+		background-color gris
+		color dorado
+		text-transform uppercase
+		border 2px solid dorado
+	.storefront-sticky-add-to-cart
+		background-color rgba(black, .95)
+		color white
+	.customizer-storefront
+		.inner-banner-container
+			height 125px
+	.cart-collaterals
+		width 100% !important
+	.col2-set
+		width 100%
+		float left
+		margin-right 0
+		margin-left 0
+		margin-bottom 10px
+	.form-row
+		display flex
+		justify-content flex-start
+		align-items center
+		margin-bottom 20px
+	.woocommerce-shipping-fields
+		margin-top 30px
+		margin-bottom 30px
+	.col2-set.addresses
+		.col-2
+			width 100%
+	table.cart
+		td.actions
+			.coupon
+				margin-top 0px
+			.button
+				margin-top 30px
+				
 @media screen and (min-width: 992px)
 	.main-banner-container
 		height 455px
@@ -558,6 +696,8 @@ form.cart
 				width 100%
 		.slick-dots
 			margin 20px 0 0
+	.woocommerce button.button.alt
+		margin 10px 30px 10px -2px
 @media screen and (min-width: 1200px)
 	.main-banner-container
 		height 530px
@@ -569,3 +709,8 @@ form.cart
 		margin-top 55px
 	.site-main
 		margin-bottom 0
+	.woocommerce button.button.alt
+		margin 10px 100px 10px -2px
+	.fa-angle-left:before
+	.fa-angle-right:before
+		font-size 4em
