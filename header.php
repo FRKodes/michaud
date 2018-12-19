@@ -39,7 +39,6 @@
 		 * @hooked storefront_product_search                   - 40
 		 * @hooked storefront_header_container_close           - 41
 		 * @hooked storefront_primary_navigation_wrapper       - 42
-		 
 		 * @hooked storefront_primary_navigation               - 21
 		 * @hooked storefront_header_cart                      - 22
 		 * @hooked storefront_primary_navigation_wrapper_close - 23
@@ -65,7 +64,7 @@
 					<video autoplay muted loop id="myVideo">
 					  <source src="<?php echo get_stylesheet_directory_uri() . "/assets/images/michaud-video.MP4"; ?>" type="video/mp4">
 					</video>
-					<a href="#" class="design-button mayus">Diseña tu traje ahora</a>
+					<a href="http://blueterrier.mx/michaud/producto/producto-03/" class="design-button mayus">Diseña tu traje ahora</a>
 					<div class="top-contact">
 						<p>
 							<span class="dorado">CUSTOM TAILORING</span> <br>
@@ -79,11 +78,9 @@
 	} else { ?>
 	        <div class="container-fluid">
 	    		<div class="row">
-	    			<div class="inner-banner-container" style="background-image: url(<?php the_post_thumbnail_url() ?>);">
+	    			<div class="inner-banner-container" style="background-image: url(<?php the_post_thumbnail_url() ?>) !important;">
 	    				<h1 class="dorado mayus text-center"><?php the_title() ?></h1>
-	    				<p class="text-center">
-	    					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi modi eos libero quaerat molestiae.
-	    				</p>
+	    				<p class="text-center"><?php the_field('extra_description') ?></p>
 	    			</div>
 	    		</div>
 	    	</div><?php

@@ -69,7 +69,7 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 */
 	function storefront_site_branding() {
 		?>
-		<div class="site-branding"><a href="/"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/logo_michaud_gris.svg"; ?>" alt="logo michaud"></a></div>
+		<div class="site-branding"><a href="/michaud"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/logo_michaud_gris.svg"; ?>" alt="logo michaud"></a></div>
 		<?php
 	}
 }
@@ -206,3 +206,22 @@ function hb_change_number_best_selling_products( $args ) {
 	$args['title'] = 'PRODUCTOS DESTACADOS';
 	return $args;
 }
+
+
+function create_nota_prensa_post_type() {
+  register_post_type( 'nota_prensa',
+    array(
+      'labels' => array(
+        'name' => __( 'Notas de prensa' ),
+        'singular_name' => __( 'Nota de prensa' ),
+        'add_new' => __( 'Agregar nueva nota de prensa' )
+
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'notas-de-prensa'),
+      'supports' => array('title', 'editor', 'thumbnail' ),
+    )
+  );
+}
+add_action( 'init', 'create_nota_prensa_post_type' );

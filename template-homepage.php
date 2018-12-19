@@ -22,7 +22,7 @@ get_header(); ?>
 					<div class="main-cat novios">
 						<div class="info">
 							<p class="alegreya">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							<a href="#novios">NOVIOS</a>
+							<a href="http://blueterrier.mx/michaud/michaud-la-imagen-del-exito-un-traje-hecho-a-conciencia/">NOVIOS</a>
 						</div>
 					</div>
 				</div>
@@ -30,13 +30,13 @@ get_header(); ?>
 					<div class="main-cat formales">
 						<div class="info">
 							<p class="alegreya">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							<a href="#formales">EVENTOS FORMALES</a>
+							<a href="http://blueterrier.mx/michaud/producto/producto-03/">EVENTOS FORMALES</a>
 						</div>
 					</div>
 					<div class="main-cat casual">
 						<div class="info">
 							<p class="alegreya">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							<a href="#CASUAL">CASUAL SPORT</a>
+							<a href="http://blueterrier.mx/michaud/como-abrochar-correctamente-los-sacos-de-uno-dos-y-tres-botones/">CASUAL SPORT</a>
 						</div>
 					</div>
 				</div>
@@ -58,42 +58,17 @@ get_header(); ?>
 			
 			<section class="storefront-product-section prensa">
 				<h2 class="section-title">PRENSA</h2>
-				<div class="media-container">
-					<div class="media-item">
-						<div class="media-logo">
-							<img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/glamour-logo.png"; ?>" alt="glamour logo">
-						</div>
-						<div class="resume">
-							<p>
-								"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt saepe consequuntur cumque rem distinctio iure, dolorem consectetur."
-							</p>
-						</div>
-						<a href="#" class="button product_type_simple add_to_cart_button">VER NOTA COMPLETA</a>
-					</div>
-					
-					<div class="media-item">
-						<div class="media-logo">
-							<img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/maxwell-magazine.png"; ?>" alt="maxwell magazine logo">
-						</div>
-						<div class="resume">
-							<p>
-								"Consectetur adipisicing elit. Perspiciatis cum aspernatur ab, quibusdam neque assumenda ducimus aut! Aspernatur, quod nam molestias modi."
-							</p>
-						</div>
-						<a href="#" class="button product_type_simple add_to_cart_button">VER NOTA COMPLETA</a>
-					</div>
-					
-					<div class="media-item">
-						<div class="media-logo">
-							<img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/glamour-logo.png"; ?>" alt="glamour logo">
-						</div>
-						<div class="resume">
-							<p>
-								"Saepe nihil neque hic sequi asperiores. Tempore autem doloribus culpa quibusdam enim quia repellendus inventore quo natus"
-							</p>
-						</div>
-						<a href="#" class="button product_type_simple add_to_cart_button">VER NOTA COMPLETA</a>
-					</div>
+				<div class="media-container"><?php
+					$args = array( 'post_type' => 'nota_prensa', 'posts_per_page' => 3 );
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post();?>
+						<div class="media-item">
+							<div class="media-logo"><img src="<?php the_field('logo_prensa'); ?>" alt="glamour logo"></div>
+							<div class="resume"><p><?php the_excerpt(); ?></p></div>
+							<a href="<?php the_permalink(); ?>" class="button product_type_simple add_to_cart_button">VER NOTA COMPLETA</a>
+						</div> <?php 
+					endwhile;
+					wp_reset_query(); ?>
 				</div>
 			</section>
 

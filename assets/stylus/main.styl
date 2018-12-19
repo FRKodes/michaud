@@ -9,6 +9,10 @@ dorado = #e1c26e
 	color dorado
 .white
 	color white
+.black
+	color black
+.bold
+	font-weight bold
 .mayus
 	text-transform uppercase
 .alegreya
@@ -71,7 +75,7 @@ button.menu-toggle
 	.site-main
 		padding-top 2em
 .main-banner-container
-	background purple
+	background transparent
 	height 140px
 	display block
 	width 100%
@@ -112,11 +116,11 @@ button.menu-toggle
 	align-items center
 	flex-flow column
 	width 100%
-	background-size cover
-	background-color transparent
-	background-repeat no-repeat
-	background-position center center
-	background-size cover
+	background-size cover !important
+	background-color transparent !important
+	background-repeat no-repeat !important
+	background-position center center !important
+	background-size cover !important
 	padding-top 100px
 	h1
 		font-size 1.3em
@@ -125,6 +129,16 @@ button.menu-toggle
 		width 300px
 		font-size .8em
 		width 300px
+.single-post
+	.inner-banner-container
+		display none !important
+	.entry-header
+		margin-top 120px
+.post-type-archive-product
+	.inner-banner-container
+		display none !important
+	.woocommerce-products-header
+		margin-top 130px
 .storefront-breadcrumb
 	display none
 #secondary
@@ -142,13 +156,13 @@ button.menu-toggle
 			padding 4px 10px
 			color dorado
 		&.novios
-			background transparent url(./assets/images/novios.png) no-repeat center center
+			background transparent url(./assets/images/novios.jpg) no-repeat center center
 			background-size cover
 		&.formales
-			background transparent url(./assets/images/formales.png) no-repeat center center
+			background transparent url(./assets/images/formales.jpg) no-repeat center center
 			background-size cover
 		&.casual
-			background transparent url(./assets/images/casual.png) no-repeat center center
+			background transparent url(./assets/images/casual.jpg) no-repeat center center
 			background-size cover
 h2.woocommerce-loop-product__title
 	color black
@@ -266,6 +280,14 @@ h2.title.faq
 .single-product
 	.inner-banner-container
 		height 125px
+		display none !important
+	.product
+		margin-top 130px
+.page-id-77
+	.inner-banner-container
+		display none
+	.entry-header
+		margin-top 130px
 button.single_add_to_cart_button
 	border-color red !important
 	color dorado
@@ -342,26 +364,26 @@ fieldset
 	background none !important
 
 h1.entry-title
-	text-align:center
+	text-align center
 
 .info
 	background none
 
-.inner-banner-container
-	height 100px
-	background none !important
-
 .inner-banner-container h1
-	display none
+	display block !important
 
 .inner-banner-container p
-	display none
+	display block !important
 
-.inner-banner-container
-	height 110px
+.post-type-archive-product
+	.inner-banner-container
+		height 125px !important
+		h1
+		p
+			display none !important
 
 .storefront-product-pagination
-	display none
+	display none !important
 .summary.entry-summary
 	h1.product_title.entry-title
 		text-align left
@@ -445,7 +467,10 @@ table.cart
 			margin-top 30px
 		.button
 			margin-top 30px
-			
+.blog-item-mini
+	border-bottom 1px solid gris
+	margin-bottom 30px
+	margin-top 30px
 @media screen and (min-width: 375px)
 	.nosotros-images-container
 		height 335px
@@ -564,6 +589,8 @@ table.cart
 			font-size .8em
 	.inner-banner-container
 		height 300px
+	.inner-banner-container
+		height 420px !important
 	.nosotros-images-container
 		.slick-dots
 			margin -30px 0 0
@@ -666,7 +693,15 @@ table.cart
 				margin-top 0px
 			.button
 				margin-top 30px
-				
+	.media-item-review
+		.resume
+			height 90px
+			overflow hidden
+			margin-bottom 20px
+	.blog-item-mini
+		padding-bottom 20px
+		margin-bottom 40px
+		margin-top 40px
 @media screen and (min-width: 992px)
 	.main-banner-container
 		height 455px
@@ -698,6 +733,11 @@ table.cart
 			margin 20px 0 0
 	.woocommerce button.button.alt
 		margin 10px 30px 10px -2px
+	.main-cats-container
+		.two
+			.main-cat
+				.info
+					right 15px
 @media screen and (min-width: 1200px)
 	.main-banner-container
 		height 530px
@@ -714,3 +754,11 @@ table.cart
 	.fa-angle-left:before
 	.fa-angle-right:before
 		font-size 4em
+	.media-item-review
+		.resume
+			height 180px
+	.main-cats-container
+		.two
+			.main-cat
+				.info
+					right 25px
