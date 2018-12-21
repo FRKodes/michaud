@@ -74,9 +74,12 @@ button.menu-toggle
 .page-template-template-homepage:not(.has-post-thumbnail)
 	.site-main
 		padding-top 2em
+.page-template-template-homepage-php
+	.site-content
+		margin-top -90px
 .main-banner-container
 	background transparent
-	height 140px
+	height 331px
 	display block
 	width 100%
 	position relative
@@ -85,7 +88,7 @@ button.menu-toggle
 	border 1px solid dorado
 	padding 4px 10px
 	position absolute
-	bottom 10px
+	top 200px
 	z-index 2
 	color dorado
 	left 50%
@@ -471,6 +474,10 @@ table.cart
 	border-bottom 1px solid gris
 	margin-bottom 30px
 	margin-top 30px
+.page-id-6
+.page-id-7
+	.inner-banner-container
+		display none
 @media screen and (min-width: 375px)
 	.nosotros-images-container
 		height 335px
@@ -485,10 +492,20 @@ table.cart
 			margin -30px 0 0
 @media screen and (min-width: 425px)
 	.main-banner-container
-		height 190px
+		height 379px
+@media screen and (min-width: 480px)
+	.main-banner-container
+		height 400px
+	.design-button
+		top 275px
 @media screen and (min-width: 569px)
 	.main-banner-container
 		height 255px
+	.page-template-template-homepage-php
+		.site-content
+			margin-top 0
+	.design-button
+		top 220px
 @media screen and (min-width: 768px)
 	.site-header
 		border none
@@ -534,6 +551,7 @@ table.cart
 		font-size .9em
 		width 200px
 		margin-left -100px
+		top unset
 	.top-contact
 		position absolute
 		top 120px
