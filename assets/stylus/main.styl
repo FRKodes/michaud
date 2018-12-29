@@ -1,5 +1,6 @@
 gris = #717070
 gris2 = #333333
+gris3 = #A9A9A9
 dorado = #e1c26e
 .gris
 	color gris
@@ -28,7 +29,7 @@ section.storefront-best-selling-products
 	margin-top 50px
 body
 	font-family 'Lora', serif
-	background #e2e1e1
+	background gris3
 .site-header
 	padding-top 1em
 	padding-bottom 1em
@@ -237,7 +238,7 @@ textarea.form-control
 	height 200px
 	margin-top 30px
 	width 100%
-	background transparent url(./assets/images/mapa-michaud.png) no-repeat center center
+	background transparent url(./assets/images/mapa-michaud.jpg) no-repeat center center
 	background-size cover
 .schedule
 	.line
@@ -300,7 +301,7 @@ form.cart
 		border 2px solid dorado !important
 		color dorado !important
 		&:before
-			background-color gris !important
+			background-color black !important
 .woocommerce
 	button.button.alt
 		border 2px solid dorado !important
@@ -478,6 +479,10 @@ table.cart
 .page-id-7
 	.inner-banner-container
 		display none
+.tg-stickyheader
+	&.is_stuck
+		top 95px !important
+		background rgba(black, .9) !important
 @media screen and (min-width: 375px)
 	.nosotros-images-container
 		height 335px
@@ -675,6 +680,9 @@ table.cart
 	form.cart
 		a.tg-btn
 			margin 0px 0 20px 0
+	form.cart
+		a.tg-btn:before
+			background-color black !important
 	a.storefront-sticky-add-to-cart__content-button.button.alt
 		background-color gris
 		color dorado
@@ -720,6 +728,12 @@ table.cart
 		padding-bottom 20px
 		margin-bottom 40px
 		margin-top 40px
+	.tg-stickyheader.is_stuck
+		padding 13px 0 0 0 !important
+		.tg-btnround
+			top 15px !important
+	.steps-content-wrap
+		padding-top 0
 @media screen and (min-width: 992px)
 	.main-banner-container
 		height 455px
@@ -736,6 +750,9 @@ table.cart
 				&.formales
 				&.casual
 					height 250px
+	.tg-stickyheader
+		&.is_stuck
+			top 108px !important
 	section.storefront-best-selling-products
 		margin-top 550px
 	.nosotros-text

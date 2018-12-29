@@ -225,3 +225,58 @@ function create_nota_prensa_post_type() {
   );
 }
 add_action( 'init', 'create_nota_prensa_post_type' );
+
+
+function faq_custom_post_type() {
+
+    $labels = array(
+        'name'                => _x( 'FAQs', 'Post Type General Name' ),
+        'singular_name'       => _x( 'FAQ', 'Post Type Singular Name' ),
+        'menu_name'           => __( 'FAQs' ),
+        'parent_item_colon'   => __( 'Parent FAQ' ),
+        'all_items'           => __( 'Todas las FAQs' ),
+        'view_item'           => __( 'Ver FAQ' ),
+        'add_new_item'        => __( 'Agregar una FAQ' ),
+        'add_new'             => __( 'Agregar nueva FAQ' ),
+        'edit_item'           => __( 'Editar FAQ' ),
+        'update_item'         => __( 'Actualizar FAQ' ),
+        'search_items'        => __( 'Buscar FAQ' ),
+        'not_found'           => __( 'Not Found' ),
+        'not_found_in_trash'  => __( 'Not found in Trash' ),
+    );
+     
+    $args = array(
+        'label'               => __( 'FAQs' ),
+        'description'         => __( 'FAQs sobre el proceso en Michaud' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+         
+        // This is where we add taxonomies to our CPT
+        'taxonomies'          => array( 'category' ),
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'faq', $args );
+ 
+}
+ 
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+ 
+add_action( 'init', 'faq_custom_post_type' );
+
+
