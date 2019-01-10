@@ -39,6 +39,11 @@ $(function() {
 
     });
 
+    $('.tg-customizeordernav.steps-nav li:last-child').on('click', function () {
+        $('#btnMoveRightTab').hide();
+    })
+    
+
 
 });
 
