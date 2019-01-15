@@ -28,7 +28,7 @@
 
 
 		<div class="col-xs-12 col-lg-6">
-			<h2 class="title faq text-center">PREGUNTAS FRECUENTES</h2>
+			<h2 class="title faq text-center">PREGUNTAS FRECUENTES BAJO CITA</h2>
 			<div id="accordion2"><?php
 				$args = array( 'post_type' => 'faq', 'posts_per_page' => 20, 'category_name' => 'faq' );
 				$loop = new WP_Query( $args );
