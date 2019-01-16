@@ -85,18 +85,22 @@ button.menu-toggle
 	width 100%
 	position relative
 	z-index 1
-.design-button
-	border 1px solid dorado
-	padding 4px 10px
+.design-button-container
 	position absolute
 	top 200px
 	z-index 2
+	text-align center
+	margin-left -50%
+	width 100%
+.design-button
+	border 1px solid dorado
+	padding 4px 10px
+	position relative
 	color dorado
 	left 50%
 	font-size .65em
 	width 150px
 	text-align center
-	margin-left -75px
 	transition color .5s ease
 	&:hover
 		color rgba(dorado, .6)
@@ -507,7 +511,7 @@ table.cart
 @media screen and (min-width: 480px)
 	.main-banner-container
 		height 400px
-	.design-button
+	.design-button-container
 		top 275px
 @media screen and (min-width: 569px)
 	.main-banner-container
@@ -515,7 +519,7 @@ table.cart
 	.page-template-template-homepage-php
 		.site-content
 			margin-top 0
-	.design-button
+	.design-button-container
 		top 220px
 @media screen and (min-width: 768px)
 	.site-header
@@ -556,12 +560,13 @@ table.cart
 			text-align right
 	.main-banner-container
 		height 340px
+	.design-button-container
+		top 325px
 	.design-button
 		padding 4px 10px
 		bottom 30px
 		font-size .9em
 		width 200px
-		margin-left -100px
 		top unset
 	.top-contact
 		position absolute
@@ -746,6 +751,8 @@ table.cart
 	.top-contact
 		position absolute
 		top 200px
+	.design-button-container
+		top 435px
 	.main-cats-container
 		.one
 			.main-cat
@@ -782,10 +789,11 @@ table.cart
 @media screen and (min-width: 1200px)
 	.main-banner-container
 		height 530px
+	.design-button-container
+		top 510px
 	.design-button
 		font-size 1.1em
 		width 250px
-		margin-left -125px
 	.nosotros-text
 		margin-top 55px
 	.site-main
