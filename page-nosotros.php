@@ -35,6 +35,12 @@ get_header(); ?>
 					</div>
 
 				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-md-12 m-top-40">
+						<video controls><source src="<?php echo get_stylesheet_directory_uri() . "/assets/video/michaud_video_completo.MP4"; ?>" /></video>
+					</div>
+				</div>
 			</div>
 
 		</main><!-- #main -->
