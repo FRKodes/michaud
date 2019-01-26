@@ -15,10 +15,10 @@
 		while ( $loop->have_posts() ) : $loop->the_post();?>
 			<div class="col-xs-12 col-sm-6 col-md-4 media-item-review text-center">
 				<div class="inner">
-					<div class="photo" style="background-image: url(<?php echo get_stylesheet_directory_uri() . "/assets/images/prensa-01.png"; ?>);"></div>
+					<div class="photo" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"></div>
 					<div class="logo"><img src="<?php the_field('logo_prensa'); ?>" alt="<?php the_field('logo_prensa'); ?>"></div>
 					<div class="resume alegreya">
-					<p><?php the_excerpt(); ?></p>
+						<p><?php the_excerpt(); ?></p>
 					</div>
 					<a href="<?php the_permalink() ?>" class="button product_type_simple add_to_cart_button">VER NOTA COMPLETA</a>
 				</div>

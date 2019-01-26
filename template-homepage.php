@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="one">
 					<div class="main-cat novios">
 						<div class="info">
-							<p class="alegreya">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<p class="alegreya">Confeccionamos tu traje para ese día único y especial.</p>
 							<a href="http://blueterrier.mx/michaud/michaud-la-imagen-del-exito-un-traje-hecho-a-conciencia/">NOVIOS</a>
 						</div>
 					</div>
@@ -29,14 +29,14 @@ get_header(); ?>
 				<div class="two">
 					<div class="main-cat formales">
 						<div class="info">
-							<p class="alegreya">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							<a href="http://blueterrier.mx/michaud/producto/producto-03/">EVENTOS FORMALES</a>
+							<p class="alegreya">Diseña tu traje, elige cada detalle como a ti te gusta.</p>
+							<a href="http://blueterrier.mx/michaud/producto/producto-03/">TRAJES FORMALES</a>
 						</div>
 					</div>
 					<div class="main-cat casual">
 						<div class="info">
-							<p class="alegreya">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							<a href="http://blueterrier.mx/michaud/como-abrochar-correctamente-los-sacos-de-uno-dos-y-tres-botones/">CASUAL SPORT</a>
+							<p class="alegreya">Somos expertos en imagen, checa nuestro blog.</p>
+							<a href="http://blueterrier.mx/michaud/como-abrochar-correctamente-los-sacos-de-uno-dos-y-tres-botones/">TIPS DE MODA</a>
 						</div>
 					</div>
 				</div>
