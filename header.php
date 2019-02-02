@@ -65,7 +65,7 @@
 					  <source src="<?php echo get_stylesheet_directory_uri() . "/assets/images/michaud-video.MP4"; ?>" type="video/mp4">
 					</video>
 					<div class="design-button-container">
-						<a href="http://blueterrier.mx/michaud/producto/producto-03/?ref=home" class="design-button mayus">Diseña tu traje ahora</a>
+						<a href="http://blueterrier.mx/michaud/selecciona-tu-prenda/" class="design-button mayus">Diseña tu traje ahora</a>
 						<a href="http://blueterrier.mx/michaud/tienda" class="design-button mayus">Visita la Tienda</a>
 					</div>
 					<div class="top-contact">

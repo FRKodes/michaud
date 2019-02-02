@@ -30,8 +30,9 @@ $(function() {
     });
 
     $('span[data-asset="tela"]').on('click', function () {
-        console.log('clicked!!');
         var tela_id = $(this).attr('class').split(' ').pop().replace('tg-', '');
+        
+        console.log('clicked! ' + tela_id);
         
         var back_img = $('.tg-suitfront .tg-suitbg img').attr('src').replace('nada', tela_id + '-back');
 
@@ -45,10 +46,7 @@ $(function() {
         $('#step-2 .tg-suitfront .tg-suitbg img').attr('src',pants_front_img);
         $('#step-2 .tg-suitback .tg-suitbg img').attr('src',pants_back_img);
 
-
-
-        console.log(tela_id);
-        console.log(back_img);
+        console.log('Img to set: ' + back_img);
         // console.log('panto: '  + pants_front_img);
 
     });
