@@ -21,8 +21,11 @@ get_header(); ?>
 						
 						<div class="nosotros-images-container">
 							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/nosotros-01.png"; ?>" alt="nosotros-01"></div>
-							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/nosotros-01.png"; ?>" alt="nosotros-01"></div>
-							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/nosotros-01.png"; ?>" alt="nosotros-01"></div>
+							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/instagram01.jpg"; ?>" alt="michaud instagram 01"></div>
+							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/instagram02.jpg"; ?>" alt="michaud instagram 02"></div>
+							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/instagram03.jpg"; ?>" alt="michaud instagram 03"></div>
+							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/instagram04.jpg"; ?>" alt="michaud instagram 04"></div>
+							<div class="item"><img src="<?php echo get_stylesheet_directory_uri() . "/assets/images/instagram05.jpg"; ?>" alt="michaud instagram 05"></div>
 						</div>
 					</div>
 
