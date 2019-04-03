@@ -67,6 +67,71 @@ $(function() {
     })
     
 
+    $('.tg-btnround.tg-btnnext.tg-btnfinish.add-to-cart-order').html('FINALIZAR');
+
+    $('a[data-step="step-style"]').html('ESTILO');
+
+
+
+    $('#tg-btnfinish').on('click', function () {
+
+        setTimeout(
+          function(){
+            $('#confirmBox h1').html('¿Procesar orden?');
+            $('#confirmBox p').html('¿Estás seguro que quieres procesar esta orden?');
+            $('#confirmBox a.button.blue').html('Si');
+            $('#confirmBox a.button.gray').html('NO');
+          }, 100);
+
+    });
+
+    $('a.checkout-button.button.alt.wc-forward').on('click', function () {
+
+        console.log('clickeddd!!!!');
+
+        setTimeout(
+          function(){
+            
+            $('.sticky-queue.top-right p.sticky-note').html('Por favor agrega las medidas de tu pedido antes de procesar el pedido.');
+
+          }, 100);
+
+    });
+
+    $('.cart-measurements-wrap .cart-item-modification a').html('Agregar medidas');
+    $('.cart-edit-wrap .cart-item-modification a').html('Cambiar ajustes');
+
+    $('.cus-modal-header h4').html('Cambiar ajustes');
+
+    
+    var titulo_actual = $('.cus-options-type span').html();
+    console.log(titulo_actual);
+
+    if (titulo_actual == 'Style?') {
+        $('.cus-options-type span').html('¿Cambiar estilo?');
+    }
+
+    var titulo_actual_style = $('.cus-options-data label').html();
+    console.log(titulo_actual_style);
+
+    if (titulo_actual_style == 'Select style') {
+        $('.cus-options-data label').html('Estilo');
+    }
+    
+    $('input[data-type="save_only"]').val('Guardar ajustes');
+    $('input[data-type="save_close"]').val('Guardar y cerrar');
+    
+    $('.measurement-fieldbox input[class="form-control measurement_val"]').attr('placeholder', 'Agrega la medida (pulgadas)');
+
+    $('a.cus-btn.measurement-steps.measurement-prev.tg-btnprevious').html('Anterior');
+    $('a.cus-btn.measurement-steps.measurement-next.tg-btnnext').html('Siguiente');
+    
+
+    
+    
+
+
+
 
 });
 
