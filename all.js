@@ -72,7 +72,6 @@ $(function() {
     $('a[data-step="step-style"]').html('ESTILO');
 
 
-
     $('#tg-btnfinish').on('click', function () {
 
         setTimeout(
@@ -144,6 +143,131 @@ $('.nosotros-images-container').slick({
 	slidesToScroll: 1
 });
 
+
+$('.carousel-abrigos').slick({
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+$('.carousel-accesorios').slick({
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+
+$('.carousel-camisas').slick({
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+$('.carousel-etiqueta').slick({
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+
+$('.carousel-formal').slick({
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+
+$('.carousel-sport').slick({
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
+
+$('.carousel-categories').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 6,
+  prevArrow: '<button type="button" class="slick-prev icon-flecha"></button>',
+  nextArrow: '<button type="button" class="slick-next icon-flecha"></button>',
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+$('.carousel-categories a').on('click', function(){
+
+    $('.carousel-categories a').removeClass('dorado');
+    $(this).addClass('dorado');
+
+    var current_category = $(this).attr('href').replace('#', '');
+    
+    $('.carousel-abrigos').addClass('transparent-stuff');
+    $('.carousel-accesorios').addClass('transparent-stuff');
+    $('.carousel-camisas').addClass('transparent-stuff');
+    $('.carousel-etiqueta').addClass('transparent-stuff');
+    $('.carousel-formal').addClass('transparent-stuff');
+    $('.carousel-sport').addClass('transparent-stuff');
+
+    $('.carousel-' + current_category).removeClass('transparent-stuff');
+
+    $('.gallery-title-text').html(current_category);
+
+    console.log('.carousel-' + current_category);
+
+});
 
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();

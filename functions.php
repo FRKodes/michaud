@@ -280,3 +280,57 @@ function faq_custom_post_type() {
 add_action( 'init', 'faq_custom_post_type' );
 
 
+
+function gallery_custom_post_type() {
+
+    $labels = array(
+        'name'                => _x( 'Gallería items', 'Post Type General Name' ),
+        'singular_name'       => _x( 'Gallería item', 'Post Type Singular Name' ),
+        'menu_name'           => __( 'Gallería items' ),
+        'parent_item_colon'   => __( 'Gallery Item Padre' ),
+        'all_items'           => __( 'Todas los items de la Gallería' ),
+        'view_item'           => __( 'Ver Gallery item' ),
+        'add_new_item'        => __( 'Agregar un Item a la Gallería' ),
+        'add_new'             => __( 'Agregar nuevo Item a la Gallería' ),
+        'edit_item'           => __( 'Editar Item de la Gallería ' ),
+        'update_item'         => __( 'Actualizar Item de la Gallería' ),
+        'search_items'        => __( 'Buscar Item de la Gallería ' ),
+        'not_found'           => __( 'Item de la galería no encontrado' ),
+        'not_found_in_trash'  => __( 'Item de la galería no encontrado en la papelera' ),
+    );
+     
+    $args = array(
+        'label'               => __( 'Gallery items category' ),
+        'description'         => __( 'Gallery items Michaud' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'thumbnail', ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => true,
+        'publicly_queryable'  => false,
+        'capability_type'     => 'page',
+         
+        // This is where we add taxonomies to our CPT
+        'taxonomies'          => array( 'category' ),
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'gallery_item', $args );
+ 
+}
+ 
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+ 
+add_action( 'init', 'gallery_custom_post_type' );
+
+

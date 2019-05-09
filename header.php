@@ -83,7 +83,7 @@
 	    		<div class="row">
 	    			<div class="inner-banner-container" style="background-image: url(<?php the_post_thumbnail_url() ?>) !important;">
 	    				<h1 class="dorado mayus text-center"><?php the_title() ?></h1>
-	    				<p class="text-center"><?php the_field('extra_description') ?></p>
+	    				<p class="text-center"><?php //the_field('extra_description') ?></p>
 	    			</div>
 	    		</div>
 	    	</div><?php

@@ -50,3 +50,6 @@
 .icon-login:before {
   content: "\64";
 }
+.icon-flecha:before {
+  content: "\65";
+}
